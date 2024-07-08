@@ -9,9 +9,9 @@ import SwiftUI
 public struct SuccessScanResult: Identifiable, Equatable {
     public let id = UUID()
     public let image: ReceiptImage
-    public let receipt: Receipt
+    public let receipt: FingerReceipt
     
-    public init(image: ReceiptImage, receipt: Receipt) {
+    public init(image: ReceiptImage, receipt: FingerReceipt) {
         self.image = image
         self.receipt = receipt
     }

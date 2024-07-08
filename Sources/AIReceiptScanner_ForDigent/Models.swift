@@ -80,3 +80,24 @@ enum Category: String, Identifiable, CaseIterable {
     case travel = "Travel"
     case utilities = "Utilities"
 }
+
+public struct FingerReceipt: Codable, Identifiable, Equatable {
+    public let id = UUID()
+    
+    public var funcType: String?
+    public var gender: String?
+    public var ageRange: Int?
+    public var percent: Double?
+    public var date: Date?
+    public var result: Bool?
+    
+    init(funcType: String? = nil, gender: String? = nil, ageRange: Int? = nil, percent: Double? = nil, date: Date? = nil, result: Bool? = nil) {
+        self.funcType = funcType
+        self.gender = gender
+        self.ageRange = ageRange
+        self.percent = percent
+        self.date = date
+        self.result = result
+    }
+    
+}
