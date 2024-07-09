@@ -27,7 +27,7 @@ public struct ReceiptScanResultView: View {
     
     private func containerView(receipt: FingerReceipt) -> some View {
         VStack {
-            Text("\(receipt.ageRange)")
+            Text("\(receipt.id)")
 //            if showCopyJSONButton {
 //                HStack {
 //                    Spacer()
