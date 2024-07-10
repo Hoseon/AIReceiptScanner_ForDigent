@@ -81,6 +81,10 @@ enum Category: String, Identifiable, CaseIterable {
     case utilities = "Utilities"
 }
 
+public struct ResponseFingerLogData: Codable {
+    let data: [FingerReceipt]
+}
+
 public struct FingerReceipt: Codable, Identifiable, Equatable {
     public let id = UUID()
     
@@ -101,3 +105,13 @@ public struct FingerReceipt: Codable, Identifiable, Equatable {
     }
     
 }
+
+extension FingerReceipt {
+    var dateText: String {
+        guard let date = date else { return "N/A" }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd"
+        return dateFormatter.string(from: date)
+    }
+}
+
